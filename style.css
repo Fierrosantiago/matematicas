@@ -1,7 +1,3 @@
-/* =====================================================
-   MATH TECH — STYLE.CSS
-===================================================== */
-
 :root {
     --blue: #00d9ff;
     --blue-dark: #009fc0;
@@ -704,67 +700,225 @@ ul {
 
 .description {
     color: var(--text-gray);
+  ;
+    font-size: 14px;
 }
 
 .steps {
     margin-top: 30px;
-    display: grid;
-    gap: 15px;
 }
 
 .step {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
 }
 
 .step span {
     color: var(--blue);
     font-family: monospace;
+    font-size: 13px;
 }
 
 .step p {
-    color: #9aabba;
+    color: #b0bfcc;
     font-size: 14px;
 }
 
-.equation-box {
-    padding: 50px;
+/* =====================================================
+   RETO MATEMÁTICO
+===================================================== */
+
+.challenge-box {
+    padding: 40px 30px;
     text-align: center;
     background: linear-gradient(145deg, #10253a, #081522);
     border: 1px solid var(--border);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
 }
 
-.equation-box > span {
-    color: #70869b;
-    font-size: 10px;
-    letter-spacing: 2px;
+.challenge-header h3 {
+    margin-top: 8px;
+    font-size: 26px;
 }
 
-.equation {
+.challenge-equation {
     margin: 25px 0;
     color: var(--blue);
     font-family: Georgia, serif;
-    font-size: 36px;
+    font-size: 38px;
 }
 
-.result {
-    color: #9aabba;
+.challenge-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 480px;
+    margin: 0 auto;
 }
 
-.result strong {
+.challenge-option {
+    padding: 18px;
     color: white;
-    font-size: 25px;
+    background: #0c1b2c;
+    border: 1px solid #294159;
+    border-radius: 10px;
+    font-size: 22px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.challenge-option:hover {
+    border-color: var(--blue);
+    background: #102337;
+}
+
+.challenge-option.correct {
+    border-color: #34d399;
+    background: rgba(52, 211, 153, 0.12);
+    color: #34d399;
+}
+
+.challenge-option.wrong {
+    border-color: #ff5c70;
+    background: rgba(255, 92, 112, 0.12);
+    color: #ff5c70;
+}
+
+.challenge-next {
+    margin-top: 25px;
+    padding: 12px 25px;
+    color: #06111d;
+    background: var(--blue);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.challenge-next:hover {
+    background: #68eaff;
+}
+
+/* =====================================================
+   ÁREA Y PERÍMETRO
+===================================================== */
+
+.geo-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.geo-selector h3 {
+    margin: 15px 0 20px;
+    font-size: 32px;
+}
+
+.figure-buttons {
+    display: grid;
+    gap: 12px;
+}
+
+.figure-btn {
+    padding: 16px 20px;
+    text-align: left;
+    color: #b0bfcc;
+    background: #0c1b2c;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.figure-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.figure-btn.active {
+    color: #06111d;
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
+.geo-calculator {
+    padding: 35px;
+    background: #0c1b2c;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.geo-inputs {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.geo-field {
+    text-align: center;
+}
+
+.geo-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #8da1b5;
+    font-size: 12px;
+}
+
+.geo-field input {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background: #07111f;
+    border: 1px solid #294159;
+    border-radius: 7px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.geo-field input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.08);
+}
+
+.geo-result {
+    min-height: 65px;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.geo-result span {
+    display: block;
+    margin: 0 20px;
+    font-size: 15px;
+    color: #9aabba;
 }
 
 /* =====================================================
    VIDEO
 ===================================================== */
-
-.video-section {
-    background: #081522;
-}
 
 .video-grid {
     display: grid;
@@ -773,25 +927,21 @@ ul {
     align-items: center;
 }
 
-.video-container {
-    overflow: hidden;
-    background: black;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-}
-
 .video-container video {
     width: 100%;
-    display: block;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #000;
 }
 
 .video-text h3 {
-    margin: 15px 0;
+    margin: 15px 0 15px;
     font-size: 28px;
 }
 
 .video-text p {
     color: var(--text-gray);
+    font-size: 14px;
 }
 
 /* =====================================================
@@ -804,7 +954,7 @@ ul {
 }
 
 .resource {
-    padding: 22px;
+    padding: 22px 25px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -816,8 +966,7 @@ ul {
 
 .resource:hover {
     border-color: var(--blue);
-    transform: translateX(6px);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.05);
+    transform: translateX(5px);
 }
 
 .resource-icon {
@@ -829,23 +978,24 @@ ul {
     color: var(--blue);
     border: 1px solid rgba(0, 217, 255, 0.3);
     border-radius: 8px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
 }
 
 .resource h3 {
     font-size: 16px;
+    margin-bottom: 4px;
 }
 
 .resource p {
-    color: #778da1;
+    color: #7f94a8;
     font-size: 12px;
 }
 
-.arrow {
+.resource .arrow {
     margin-left: auto;
     color: var(--blue);
-    font-size: 22px;
+    font-size: 20px;
 }
 
 /* =====================================================
@@ -853,14 +1003,13 @@ ul {
 ===================================================== */
 
 footer {
-    padding: 50px 30px;
+    padding: 60px 30px;
     text-align: center;
-    background: #050d17;
-    color: #6f8295;
+    background: #050d18;
+    border-top: 1px solid var(--border);
 }
 
 .footer-logo {
-    color: white;
     font-size: 22px;
     font-weight: bold;
 }
@@ -869,15 +1018,87 @@ footer {
     color: var(--blue);
 }
 
+footer p {
+    margin-top: 10px;
+    color: #7f94a8;
+    font-size: 13px;
+}
+
 .footer-line {
-    width: 100px;
-    height: 1px;
-    margin: 20px auto;
-    background: var(--border);
+    width: 50px;
+    height: 2px;
+    margin: 25px auto;
+    background: var(--blue);
 }
 
 footer small {
-    color: #52677c;
+    color: #5c7183;
+    font-size: 12px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero,
+    .about-grid,
+    .fraction-layout,
+    .equation-grid,
+    .geo-layout,
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 130px;
+        gap: 50px;
+    }
+
+    .formula-card {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .fractions-input {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .operator-box select {
+        width: 60px;
+        height: 60px;
+    }
+
+    .challenge-options {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-box {
+        min-height: auto;
+    }
+
+    .geo-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        gap: 30px;
+    }
+
 }
 
 /* =====================================================
@@ -887,9 +1108,8 @@ footer small {
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -897,135 +1117,10 @@ footer small {
 }
 
 @keyframes floating {
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0);
     }
-
     50% {
-        transform: translateY(-8px);
-    }
-}
-
-/* =====================================================
-   RESPONSIVE — TABLET
-===================================================== */
-
-@media (max-width: 900px) {
-
-    .nav-links {
-        gap: 14px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-    }
-
-    .formula-card {
-        max-width: 500px;
-        margin: auto;
-    }
-
-    .fraction-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-card {
-        max-width: 600px;
-        margin: auto;
-    }
-
-    .equation-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* =====================================================
-   RESPONSIVE — MÓVIL
-===================================================== */
-
-@media (max-width: 650px) {
-
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding: 130px 20px 70px;
-    }
-
-    .section {
-        padding: 80px 20px;
-    }
-
-    .section.dark {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        text-align: center;
-    }
-
-    .stats {
-        gap: 25px;
-        flex-wrap: wrap;
-    }
-
-    .fractions-input {
-        grid-template-columns: 1fr;
-    }
-
-    .operator-box {
-        margin: 5px 0;
-    }
-
-    .operator-box select {
-        width: 100%;
-        height: 45px;
-    }
-
-    .fraction-calculator {
-        padding: 20px;
-    }
-
-    .equation-box {
-        padding: 35px 20px;
-    }
-
-    .equation {
-        font-size: 28px;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
-    }
-
-    .fraction-info h3 {
-        font-size: 30px;
-    }
-
-    .about-text h3 {
-        font-size: 27px;
+        transform: translateY(-12px);
     }
 }

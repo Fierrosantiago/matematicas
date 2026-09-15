@@ -45,12 +45,13 @@
                 </li>
 
                 <li>
-                    <a href="#video">Video</a>
+                    <a href="#geometria">Geometría</a>
                 </li>
 
                 <li>
-                    <a href="#recursos">Recursos</a>
+                    <a href="#video">Video</a>
                 </li>
+
 
             </ul>
 
@@ -72,8 +73,8 @@
                 </span>
 
                 <h1>
-                    Santiago
-                    <span>Fierro</span>
+                    Mi pagina web
+                    <span>Santiago Fierro</span>
                 </h1>
 
                 <p>
@@ -88,9 +89,6 @@
                         Comenzar aprendizaje
                     </a>
 
-                    <a href="#recursos" class="btn btn-outline">
-                        Ver recursos
-                    </a>
 
                 </div>
 
@@ -149,21 +147,16 @@
                 <div class="about-text">
 
                     <h3>
-                        Apasionado por la educación
-                        <span>y la tecnología.</span>
+                        Santiago Fierro
+                        <span></span>
                     </h3>
 
                     <p>
-                        Bienvenido a mi espacio educativo.
-                        Esta plataforma tiene como objetivo
-                        presentar las matemáticas de una forma
-                        clara, moderna y accesible.
+                        Analisis y desarrollo de software
                     </p>
 
                     <p>
-                        Aquí encontrarás explicaciones sobre
-                        fracciones, ecuaciones y diferentes
-                        recursos para fortalecer tus conocimientos.
+                        Soy Santiago Fierro, apasionado por la tecnología, los videojuegos y el aprendizaje. Me gusta enfrentar nuevos retos, desarrollar nuevas habilidades y buscar soluciones creativas. Mi objetivo es seguir creciendo y alcanzar mis metas personales y profesionales.
                     </p>
 
 
@@ -446,6 +439,8 @@
 
             <div class="equation-grid">
 
+                <!-- COLUMNA IZQUIERDA: EXPLICACIÓN -->
+
                 <div>
 
                     <h3 class="equation-title">
@@ -502,21 +497,183 @@
                 </div>
 
 
-                <div class="equation-box">
+                <!-- COLUMNA DERECHA: RETO MATEMÁTICO -->
 
-                    <span>
-                        ECUACIÓN
-                    </span>
+                <div class="challenge-box">
 
-                    <div class="equation">
+                    <div class="challenge-header">
+
+                        <span class="tag">RETO</span>
+
+                        <h3>
+                            Resuelve la ecuación
+                        </h3>
+
+                    </div>
+
+                    <div class="challenge-equation" id="challengeEquation">
                         2x + 6 = 16
                     </div>
 
-                    <div class="result">
+                    <div class="challenge-options" id="challengeOptions">
+                        <!-- Opciones generadas por JS -->
+                    </div>
 
-                        x =
+                    <button type="button" class="challenge-next" id="challengeNext" style="display:none;">
+                        Siguiente reto →
+                    </button>
 
-                        <strong>5</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ÁREA Y PERÍMETRO ================= -->
+
+        <section id="geometria" class="section">
+
+            <div class="section-title">
+
+                <span class="number">04</span>
+
+                <div>
+                    <span class="tag">GEOMETRÍA</span>
+
+                    <h2>Área y perímetro</h2>
+                </div>
+
+            </div>
+
+
+            <div class="geo-layout">
+
+                <!-- SELECTOR DE FIGURA -->
+
+                <div class="geo-selector">
+
+                    <span class="tag">FIGURA</span>
+
+                    <h3>Elige una figura</h3>
+
+                    <div class="figure-buttons">
+
+                        <button type="button" class="figure-btn active" data-figure="cuadrado">
+                            ▢ Cuadrado
+                        </button>
+
+                        <button type="button" class="figure-btn" data-figure="rectangulo">
+                            ▭ Rectángulo
+                        </button>
+
+                        <button type="button" class="figure-btn" data-figure="triangulo">
+                            △ Triángulo
+                        </button>
+
+                        <button type="button" class="figure-btn" data-figure="circulo">
+                            ◯ Círculo
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORMULARIO DE CÁLCULO -->
+
+                <div class="geo-calculator">
+
+                    <div class="calculator-header">
+
+                        <div>
+                            <span>CALCULADORA</span>
+                            <h3 id="geoTitle">Área y perímetro del cuadrado</h3>
+                        </div>
+
+                        <div class="calculator-icon">
+                            ▢
+                        </div>
+
+                    </div>
+
+
+                    <!-- CAMPOS (se muestran según la figura) -->
+
+                    <div class="geo-inputs" id="geoInputs">
+
+                        <!-- Cuadrado -->
+                        <div class="geo-field" data-field="cuadrado">
+                            <label>Lado (a)</label>
+                            <input type="number" id="ladoCuadrado" placeholder="Ingresa el lado">
+                        </div>
+
+                        <!-- Rectángulo -->
+                        <div class="geo-field" data-field="rectangulo" style="display:none;">
+                            <label>Base (b)</label>
+                            <input type="number" id="baseRectangulo" placeholder="Ingresa la base">
+                        </div>
+                        <div class="geo-field" data-field="rectangulo" style="display:none;">
+                            <label>Altura (h)</label>
+                            <input type="number" id="alturaRectangulo" placeholder="Ingresa la altura">
+                        </div>
+
+                        <!-- Triángulo -->
+                        <div class="geo-field" data-field="triangulo" style="display:none;">
+                            <label>Base (b)</label>
+                            <input type="number" id="baseTriangulo" placeholder="Ingresa la base">
+                        </div>
+                        <div class="geo-field" data-field="triangulo" style="display:none;">
+                            <label>Altura (h)</label>
+                            <input type="number" id="alturaTriangulo" placeholder="Ingresa la altura">
+                        </div>
+                        <div class="geo-field" data-field="triangulo" style="display:none;">
+                            <label>Lado 1</label>
+                            <input type="number" id="lado1Triangulo" placeholder="Lado 1">
+                        </div>
+                        <div class="geo-field" data-field="triangulo" style="display:none;">
+                            <label>Lado 2</label>
+                            <input type="number" id="lado2Triangulo" placeholder="Lado 2">
+                        </div>
+                        <div class="geo-field" data-field="triangulo" style="display:none;">
+                            <label>Lado 3</label>
+                            <input type="number" id="lado3Triangulo" placeholder="Lado 3">
+                        </div>
+
+                        <!-- Círculo -->
+                        <div class="geo-field" data-field="circulo" style="display:none;">
+                            <label>Radio (r)</label>
+                            <input type="number" id="radioCirculo" placeholder="Ingresa el radio">
+                        </div>
+
+                    </div>
+
+
+                    <!-- BOTONES -->
+
+                    <button type="button" id="calcularGeo" class="calculate-button">
+                        Calcular
+                        <span>→</span>
+                    </button>
+
+                    <button type="button" id="limpiarGeo" class="clear-button">
+                        Limpiar
+                    </button>
+
+
+                    <!-- RESULTADO -->
+
+                    <div class="fraction-result">
+
+                        <span>RESULTADO</span>
+
+                        <div id="resultadoGeo" class="geo-result">
+                            —
+                        </div>
+
+                        <p id="explicacionGeo">
+                            Elige una figura e ingresa sus medidas.
+                        </p>
 
                     </div>
 
@@ -533,7 +690,7 @@
 
             <div class="section-title">
 
-                <span class="number">04</span>
+                <span class="number">05</span>
 
                 <div>
 
@@ -594,111 +751,6 @@
         </section>
 
 
-        <!-- ================= RECURSOS ================= -->
-
-        <section id="recursos" class="section dark">
-
-            <div class="section-title">
-
-                <span class="number">05</span>
-
-                <div>
-
-                    <span class="tag">
-                        BIBLIOTECA
-                    </span>
-
-                    <h2>
-                        Recursos
-                    </h2>
-
-                </div>
-
-            </div>
-
-
-            <div class="resources">
-
-                <a href="#" class="resource">
-
-                    <div class="resource-icon">
-                        PDF
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Guía de fracciones
-                        </h3>
-
-                        <p>
-                            Material de estudio en PDF
-                        </p>
-
-                    </div>
-
-                    <span class="arrow">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a href="#" class="resource">
-
-                    <div class="resource-icon">
-                        DOC
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Ejercicios matemáticos
-                        </h3>
-
-                        <p>
-                            Práctica y actividades
-                        </p>
-
-                    </div>
-
-                    <span class="arrow">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a href="#" class="resource">
-
-                    <div class="resource-icon">
-                        WEB
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Herramientas digitales
-                        </h3>
-
-                        <p>
-                            Recursos para aprender
-                        </p>
-
-                    </div>
-
-                    <span class="arrow">
-                        →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
 
     <!-- ================= FOOTER ================= -->
 
@@ -722,8 +774,6 @@
 
     </footer>
 
-
-    
 
     <script src="script.js"></script>
 
