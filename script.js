@@ -325,14 +325,16 @@ const iconosFiguras = {
     cuadrado: "▢",
     rectangulo: "▭",
     triangulo: "△",
-    circulo: "◯"
+    circulo: "◯",
+    hexagono: "⬡"
 };
 
 const titulosFiguras = {
     cuadrado: "Área y perímetro del cuadrado",
     rectangulo: "Área y perímetro del rectángulo",
     triangulo: "Área y perímetro del triángulo",
-    circulo: "Área y perímetro del círculo"
+    circulo: "Área y perímetro del círculo",
+    hexagono: "Área y perímetro del hexágono"
 };
 
 let figuraActual = "cuadrado";
@@ -440,6 +442,21 @@ function calcularGeo() {
 
         area = Math.PI * r * r;
         perimetro = 2 * Math.PI * r;
+
+        mostrarResultadoGeo(area, perimetro);
+
+    }
+
+    else if (figuraActual === "hexagono") {
+
+        const a = Number(document.getElementById("ladoHexagono").value);
+
+        if (document.getElementById("ladoHexagono").value === "" || a <= 0) {
+            return mostrarErrorGeo("Ingresa un lado válido mayor que 0.");
+        }
+
+        area = (3 * Math.sqrt(3) * a * a) / 2;
+        perimetro = 6 * a;
 
         mostrarResultadoGeo(area, perimetro);
 

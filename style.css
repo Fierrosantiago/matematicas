@@ -1124,3 +1124,10 @@ footer small {
         transform: translateY(-12px);
     }
 }
+/* =====================================================
+   HEXÁGONO
+===================================================== */
+
+.geo-calculator .calculator-icon {
+    font-size: 24px;
+}
